@@ -2,6 +2,8 @@
 
 *{
     font-family: "Work Sans", sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
     
   }
 
@@ -89,7 +91,9 @@
   /* teams style */
   .teams-container{
     display: flex;
+    justify-content: center;
     align-items: center;
+    gap: 40px;
   }
   .teams-img-container{
     display: grid;
@@ -97,13 +101,58 @@
     gap:24px;
   }
   .teams-content{
-    padding-right: 70px;
-    padding-left: 70px;
+   text-align: left;
   }
   
   .teams-title{
     font-size: 3rem;
   }
+
+
+
+  /* featurees section styles */
+
+
+.features{
+  margin-top: 50px;
+  display: flex;
+  gap: 50px;
+
+}
+
+.feature-content .card{
+         border-radius: 8px;
+         padding: 30px;
+         margin-bottom: 20px;
+}
+
+.ten-years{
+  border-radius: 8px;
+  background-color: blueviolet;
+  color: white;
+  width: 150px;
+  padding: 25px;
+  text-align: center;
+  position: relative;
+  top: -100px;
+  left: -300px;
+
+}
+
+.ten-years h2{
+  font-size: 3rem;
+  margin: 0;
+}
+
+.ten-years p{
+   font-size: 1rem;
+}
+
+
+
+
+
+
 
   /* responsive styles */
 
@@ -117,20 +166,78 @@
     .teams-img-container{
       grid-template-columns: 1fr;
     }
-    .teams-content{
-      padding-left: 20px;
-      padding-right: 20px;
+    .teams-img-container img{
+      width: 100%;
     }
+    
+    .teams-content{
+      text-align: center;
+      width:70%
+     }
+
+     .features{
+      flex-direction: column;
+     }
+     .feature-img img{
+      width: 100%;
+     }
+
+     .ten-years{
+      border-radius: 8px;
+      background-color: blueviolet;
+      color: white;
+      width: 150px;
+      padding: 25px;
+      text-align: center;
+      position: static;
+     
+    
+    }
+
   }
 
 
+
+
   @media screen and (min-width:576px) and (max-width:960px){
+    
+   *{
+    max-width: 100%;
+   } 
+
     header{
       padding: 50px;
     }
     nav, .teams-container{
       flex-direction: column;
+      
     }
+
+    .features{
+      margin-top: 50px;
+      display: flex;
+      gap: 0px;
+    
+    }
+
+
+    .teams-content{
+      text-align: center;
+      width:70%
+     }
+
+     .ten-years{
+      border-radius: 8px;
+      background-color: blueviolet;
+      color: white;
+      width: 150px;
+      padding: 25px;
+      text-align: center;
+      position: static;
+     
+    
+    }
+   
   }
 
 
